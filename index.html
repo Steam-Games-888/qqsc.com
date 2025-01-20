@@ -43,7 +43,7 @@
 <body>
     <div class="container">
         <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/13ba14d085a54136aae39f0c276157eb.png~tplv-a9rns2rl98-resize-jpeg-v1.png?rk3s=1fb89129&x-expires=1737973357&x-signature=oCXm7z3Yf3ND%2F2hxWjzRupRR%2BiI%3D" alt="QQ支付二维码">
-        <p>-请扫一扫图中二维码付款-</p>
+        <p>请扫一扫图中二维码付款！</p>
         <div class="time" id="timeDisplay"></div>
     </div>
 
@@ -56,6 +56,7 @@
             var hour = now.getHours();
             var minute = now.getMinutes();
             var second = now.getSeconds();
+            second = second < 10? '0' + second : second;
             document.getElementById("timeDisplay").innerHTML = "当前时间：" + year + "年" + month + "月" + day + "日 " + hour + ":" + minute + ":" + second;
         }
 
