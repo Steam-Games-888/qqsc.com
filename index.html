@@ -1,67 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QQ支付页面</title>
-    <style>
-        body {
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-      .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        img {
-            max-width: 300px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 18px;
-            color: #333;
-        }
-
-      .time {
-            font-size: 16px;
-            color: #666;
-            margin-top: 10px;
-        }
-    </style>
+    <title>赞助支持</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <img src="https://pic1.imgdb.cn/item/679c711bd0e0a243d4f8bf84.png" alt="QQ支付二维码">
-        <p>-请扫一扫图中二维码付款-</p>
-        <div class="time" id="timeDisplay"></div>
+        <h1 class="animated-title">感谢您的支持！</h1>
+        <div class="sponsor-code">
+            <img src="https://pic1.imgdb.cn/item/679c711bd0e0a243d4f8bf84.png" alt="QQ赞助码" class="floating">
+        </div>
+        <div class="time-display">
+            <p class="scan-hint">-请使用QQ扫描二维码赞助-</p>
+            <p>中国大陆标准时间：</p>
+            <p id="china-time"></p>
+        </div>
     </div>
-
-    <script>
-        function updateTime() {
-            var now = new Date();
-            var year = now.getFullYear();
-            var month = now.getMonth() + 1;
-            var day = now.getDate();
-            var hour = now.getHours();
-            var minute = now.getMinutes();
-            var second = now.getSeconds();
-            second = second < 10? '0' + second : second;
-            document.getElementById("timeDisplay").innerHTML = "当前时间：" + year + "年" + month + "月" + day + "日 " + hour + ":" + minute + ":" + second;
-        }
-
-        setInterval(updateTime, 1000);
-        updateTime();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
